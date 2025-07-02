@@ -9,3 +9,7 @@ customer_table = connSqlite.execute("SELECT * FROM Customer");
 
 for row in customer_table:
     connDuckdb.execute(f"INSERT INTO Customer VALUES {row}")
+
+connDuckdb.commit()
+connDuckdb.close()
+connSqlite.close()
