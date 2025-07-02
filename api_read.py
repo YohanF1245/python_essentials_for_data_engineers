@@ -77,6 +77,9 @@ for exchange in data['data']:
             updated
         )
     )
+
+connDuckdb.commit()
+connDuckdb.close()
 # Prepare data for insertion
 
 # Hint: Ensure that the data types of the data to be inserted is compatible with DuckDBs data column types in ./setup_db.py
